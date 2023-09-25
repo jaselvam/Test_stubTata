@@ -16,19 +16,9 @@ const App = () => {
   const { loading, apiResponse, errorMessage, fetchData } = useHttpRequest();
 
   const onsubmitClick = () => {
-    fetchData('https://api.stackexchange.com/2.3/questions', {
-      params: {
-        key: '7LKf)) oX9jsifAU1Yggifw((',
-        site: 'stackoverflow',
-        page: 1,
-        pagesize: 100,
-        order: 'desc',
-        sort: 'votes',
-        tagged: 'reactis',
-        filter: 'default',
-        nottagged: 'jquery;node js;angul arjs;vue.js;javascript',
-      },
-    });
+    fetchData(
+      'https://api.stackexchange.com/2.3/questions?site=stackoverflow&page=1&pagesize=100&order=desc&sort=votes&tagged=reactjs&filter=default&nottagged=jquery%3Bnode.js%3Bangularjs%3Bvue.js%3Bjavascript&key=7Lkf))oX9jsifAU1Yggifw(('
+    );
   };
   const layout = {
     labelCol: { span: 8 },
@@ -45,7 +35,7 @@ const App = () => {
         <Content
           style={{
             paddingBlock: '3rem',
-            paddingInline: '2rem',
+            paddingInline: '22rem',
           }}
         >
           <div
